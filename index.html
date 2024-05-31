@@ -7,31 +7,37 @@
     <script src="https://kit.fontawesome.com/e0908b3fdb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="">
-        <div class="bg-zinc-950 rounded-lg w-fit my-12 mx-auto grid grid-cols-4 gap-4 p-5">
-            <p class="col-span-4 text-white text-9xl text-right mb-3">0</p>
-            <button class="bg-stone-300 rounded-full p-7 w-24 text-black font-semibold text-3xl">AC</button>
-            <button class="bg-stone-300 rounded-full p-7 w-24 text-black font-bold text-3xl"><i class="fa-solid fa-delete-left"></i></button>
+    <section class="bg-zinc-950 rounded-lg w-fit my-12 mx-auto p-5">
+        <div class="display my-8">
+            <input id="operand-one-field" class="block bg-zinc-950 text-white text-right w-full text-4xl" type="text" name="">
+            <input id="operator-field" class="block bg-zinc-950 text-white text-right w-full text-sm" type="text" name="">
+            <input id="operand-two-field" class="block bg-zinc-950 text-white text-right w-full text-4xl" type="text" name="">
+        </div>
+
+        <div class="grid grid-cols-4 gap-4">
+            <button id="btn-all-clear" class="bg-stone-300 rounded-full p-7 w-24 text-black font-semibold text-3xl">AC</button>
+            <button id="delete-last" class="bg-stone-300 rounded-full p-7 w-24 text-black font-bold text-3xl"><i class="fa-solid fa-delete-left"></i></button>
             <button class="bg-stone-300 rounded-full p-7 w-24 text-black font-bold text-4xl">%</button>
             <button class="bg-orange-400 rounded-full p-7 w-24 text-white"><i class="fa-solid fa-divide"></i></button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">7</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">8</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">9</button>
+            <button id="btn-seven" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">7</button>
+            <button id="btn-eight" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">8</button>
+            <button id="btn-nine" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">9</button>
             <button class="bg-orange-400 rounded-full p-7 w-24 text-white font-bold text-3xl"><i class="fa-solid fa-xmark"></i></button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">4</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">5</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">6</button>
+            <button id="btn-four" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">4</button>
+            <button id="btn-five" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">5</button>
+            <button id="btn-six" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">6</button>
             <button class="bg-orange-400 rounded-full p-7 w-24 text-white font-bold text-3xl"><i class="fa-solid fa-minus"></i></button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">1</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">2</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">3</button>
+            <button id="btn-one" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">1</button>
+            <button id="btn-two" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">2</button>
+            <button id="btn-three" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">3</button>
             <button class="bg-orange-400 rounded-full p-7 w-24 text-white font-bold text-3xl"><i class="fa-solid fa-plus"></i></button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-left text-white text-4xl">0</button>
-            <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">.</button>
+            <button id="btn-zero" class="bg-neutral-700 rounded-full p-7 w-24 text-left text-white text-4xl">0</button>
+            <button id="btn-dot" class="bg-neutral-700 rounded-full p-7 w-24 text-white text-4xl">.</button>
             <button class="bg-neutral-700 rounded-full p-7 w-24 text-white text-3xl">+/-</button>
             <button class="bg-orange-400 rounded-full p-7 w-24 text-white font-bold text-3xl"><i class="fa-solid fa-equals"></i></button>
     
         </div>
     </section>
+    <script src="js/functionals.js"></script>
 </body>
 </html>
