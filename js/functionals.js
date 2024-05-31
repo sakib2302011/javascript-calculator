@@ -21,7 +21,21 @@ function getNumberFromButtonToDisplay(buttonId){
 
     setFieldValueById('operand-two-field', newNumbers);
 }
+function operatorButton(operatorSign){
+    const firstOperand = getInputFieldValueById('operand-two-field');
+    const secondOperand ='';
+    setFieldValueById('operand-one-field', firstOperand);
+    setFieldValueById('operator-field', operatorSign);
+    setFieldValueById('operand-two-field', secondOperand);
 
+}
+function operatorWork(result){
+    const emptyField = '';
+    setFieldValueById('operand-one-field', emptyField);
+    setFieldValueById('operator-field', emptyField);
+    setFieldValueById('operand-two-field', result);
+
+}
 // ------------ integer number buttons ----------------
 // button nine
 document.getElementById('btn-nine').addEventListener('click', function(){
@@ -87,4 +101,72 @@ document.getElementById('delete-last').addEventListener('click', function(){
     const remainingNumbers = digits.join('');
 
     setFieldValueById('operand-two-field', remainingNumbers);
+})
+
+
+// ----------- Operators ---------------
+// addition operator
+document.getElementById('plus-operator').addEventListener('click', function(){
+    operatorButton('+');
+})
+// subtract operator
+document.getElementById('minus-operator').addEventListener('click', function(){
+    operatorButton('-');
+})
+// multiply operator
+document.getElementById('multiply-operator').addEventListener('click', function(){
+    operatorButton('*');
+})
+// division operator
+document.getElementById('division-operator').addEventListener('click', function(){
+    operatorButton('/');
+})
+// modulus operator
+document.getElementById('modulus-operator').addEventListener('click', function(){
+    operatorButton('%');
+})
+
+
+// --------- equal button ------------
+document.getElementById('btn-equal').addEventListener('click', function(){
+    const firstOperandString = getInputFieldValueById('operand-one-field');
+    const firstOperand = parseFloat(firstOperandString);
+
+    const secondOperandString = getInputFieldValueById('operand-two-field');
+    const secondOperand = parseFloat(secondOperandString);
+
+    const operator = getInputFieldValueById('operator-field');
+
+    let result;
+
+    if(operator === '+'){
+        result = firstOperand + secondOperand;
+        operatorWork(result);
+    }
+    else if(operator === '-'){
+        result = firstOperand - secondOperand;
+        operatorWork(result);
+    }
+    else if(operator === '*'){
+        result = firstOperand * secondOperand ;
+        operatorWork(result);
+    }
+    else if(operator === '/'){
+        result = firstOperand / secondOperand;
+        operatorWork(result);
+    }
+    else if(operator === '%'){
+        result = firstOperand % secondOperand;
+        operatorWork(result);
+    }
+})
+
+// ---------------  the +/- button--------------
+document.getElementById('btn-change-sign').addEventListener('click', function(){
+    // console.log('+/- clicked');
+    const operandString = getInputFieldValueById('operand-two-field');
+    const operand = parseFloat(operandString);
+
+    const newOperand = operand * -1 ;
+    setFieldValueById('operand-two-field', newOperand);
 })
